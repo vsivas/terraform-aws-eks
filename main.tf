@@ -58,19 +58,9 @@ module "eks" {
 
       instance_types = var.instance_types
 
-      min_size     = 1
-      max_size     = 3
-      desired_size = 2
-    }
-
-    two = {
-      name = "node-group-2"
-
-      instance_types = var.instance_types
-
-      min_size     = 1
-      max_size     = 2
-      desired_size = 1
+      min_size     = var.cluster_min_size
+      max_size     = var.cluster_max_size
+      desired_size = var.cluster_desired_size
     }
   }
 }

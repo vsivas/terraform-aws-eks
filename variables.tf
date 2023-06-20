@@ -27,3 +27,21 @@ variable "vpc_cidr" {
   type        = string
   default     = "10.0.0.0/16"
 }
+
+variable "cluster_min_size" {
+  description = "K8s Cluster minimum size"
+  type        = number
+  default     = 1
+}
+
+variable "cluster_max_size" {
+  description = "K8s Cluster maximum size"
+  type        = number
+  default     = 3
+}
+
+variable "cluster_desired_size" {
+  description = "K8s Cluster desired size"
+  type        = number
+  default     = 2
+}
